@@ -16,6 +16,13 @@ namespace TennisklubbenHTK.DAL
 
         }
 
+        public Member GetMemberFromId(int memberId)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TennisklubbenHTKDB")))
+            {
+                return connection.Query<Member>("dbo.spTennisKlubbenHTK_GetMemberFromId @MemberId", memberId) as Member;
+            }
+        }
         public List<Member> GetAllMembers()
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TennisklubbenHTKDB")))
