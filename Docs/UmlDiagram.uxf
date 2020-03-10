@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>190</x>
+      <y>50</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Member
+--
+--
++MemberId:int
++FirstName: string
++LastName: string
++MemberAddress: string
++MobilNumber: string
++Email: string
++Birthdate: dateTime
++RankListPoints: int
++Active: bool
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
