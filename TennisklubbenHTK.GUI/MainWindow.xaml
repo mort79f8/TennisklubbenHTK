@@ -38,7 +38,7 @@
                 HorizontalAlignment="Center"
                 Width="150"/>
         <Button x:Name="BaneListeBtn"
-                Grid.Column="1"
+                Grid.Column="2"
                 Grid.Row="2"
                 Content="Bane liste"
                 VerticalAlignment="Center"
