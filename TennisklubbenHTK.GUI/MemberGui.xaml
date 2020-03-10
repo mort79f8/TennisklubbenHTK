@@ -15,6 +15,7 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="100" />
         </Grid.RowDefinitions>
+        <!--binding lavet med hjælp fra Nickolai og Nicklas-->
         <DataGrid x:Name="ListOfMembersDataGrid"
                   Grid.Row="0"
                   ItemsSource="{Binding ListOfMembers}"
