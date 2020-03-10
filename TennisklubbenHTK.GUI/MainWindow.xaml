@@ -10,25 +10,39 @@
         Width="800"
         WindowStartupLocation="CenterScreen">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100" />
+            <RowDefinition Height="50" />
             <RowDefinition Height="100" />
             <RowDefinition Height="100" />
             <RowDefinition Height="100" />
             <RowDefinition Height="100" />
         </Grid.RowDefinitions>
-        <DataGrid Grid.Row="0"
-                  Grid.RowSpan="3"
-                  x:Name="MemberListDataGrid">
-        </DataGrid>
 
-        <Button x:Name="CreateNewMemberBtn"
-                Grid.Row="5"
-                Content="Tilføj nyt medlem"
+        <Label Grid.Row="0"
+               Grid.Column="1"
+               Content="HTK Tennisklub"
+               VerticalContentAlignment="Center"
+               HorizontalContentAlignment="Center"
+               FontSize="36" />
+
+        <Button x:Name="MedlemslisteBtn"
+                Grid.Column="0"
+                Grid.Row="2"
+                Content="Medlems liste"
                 VerticalAlignment="Center"
-                HorizontalAlignment="Left"                
-                Height="30"
-                Margin="20"
-                Click="CreateNewMemberBtn_Click" />
+                HorizontalAlignment="Center"
+                Width="150"/>
+        <Button x:Name="BaneListeBtn"
+                Grid.Column="1"
+                Grid.Row="2"
+                Content="Bane liste"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Width="150" />
     </Grid>
 </Window>

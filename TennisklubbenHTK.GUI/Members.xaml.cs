@@ -10,21 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using TennisklubbenHTK.BIZ;
 
 namespace TennisklubbenHTK.GUI
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Members.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Members : Window
     {
-        public MainWindow()
+        public Members()
         {
             InitializeComponent();
-            
         }
     }
 }
