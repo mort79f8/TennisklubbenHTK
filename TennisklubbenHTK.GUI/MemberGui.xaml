@@ -5,9 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TennisklubbenHTK.GUI"
         mc:Ignorable="d"
-        Title="MemberGui" Height="450" Width="800"
+        Title="MemberGui" Height="600" Width="800"
         WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="ListOfMembersDataGrid"
+                  Grid.Row="0"
+                  ItemsSource="{Binding ListOfMembers}"
+                  IsReadOnly="True"
+                  AutoGenerateColumns="False"
+                  SelectionChanged="ListOfMembersDataGrid_SelectionChanged">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Fornavn"
+                                    Binding="{Binding FirstName}" />
+                <DataGridTextColumn Header="Efternavn"
+                                    Binding="{Binding LastName}" />
+                <DataGridTextColumn Header="Adresse"
+                                    Binding="{Binding MemberAddress}" />
+                <DataGridTextColumn Header="Mobil nummer"
+                                    Binding="{Binding MobilNumber}" />
+                <DataGridTextColumn Header="Email"
+                                    Binding="{Binding Email}" />
+                <DataGridTextColumn Header="Fødselsdag"
+                                    Binding="{Binding Birthday}" />
+                <DataGridCheckBoxColumn Header="Aktiv"
+                                        Binding="{Binding Active}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <TextBox x:Name="FirstNameTxtBox"
+                 Grid.Row="1"
+                 Text="{Binding SelectedMember.FirstName}" />
     </Grid>
 </Window>
