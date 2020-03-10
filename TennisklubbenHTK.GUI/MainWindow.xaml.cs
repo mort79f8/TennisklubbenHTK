@@ -26,5 +26,12 @@ namespace TennisklubbenHTK.GUI
             InitializeComponent();
             
         }
+
+        private void MedlemslisteBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MemberGui memberGui = new MemberGui();
+            memberGui.Owner = this;
+            memberGui.Show();
+        }
     }
 }

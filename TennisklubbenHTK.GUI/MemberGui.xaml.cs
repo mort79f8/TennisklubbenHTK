@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace TennisklubbenHTK.GUI
 {
     /// <summary>
-    /// Interaction logic for Members.xaml
+    /// Interaction logic for MemberGui.xaml
     /// </summary>
-    public partial class Members : Window
+    public partial class MemberGui : Window
     {
-        public Members()
+        public MemberGui()
         {
             InitializeComponent();
         }

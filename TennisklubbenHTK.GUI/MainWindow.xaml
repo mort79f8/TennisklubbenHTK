@@ -36,7 +36,8 @@
                 Content="Medlems liste"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
-                Width="150"/>
+                Width="150"
+                Click="MedlemslisteBtn_Click" />
         <Button x:Name="BaneListeBtn"
                 Grid.Column="2"
                 Grid.Row="2"
