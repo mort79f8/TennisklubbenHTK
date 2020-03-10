@@ -26,7 +26,7 @@ namespace TennisklubbenHTK.DAL
 
         public void CreateNewMember(Member member)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("GunnarsAuto")))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TennisklubbenHTKDB")))
             {
                 connection.Execute("dbo.spTennisKlubbenHTKDB_CreateNewMember @FirstName, @LastName, @MemberAddress, @MobilNumber, @Email, @Birthday, @RankListPoints, @Active", member);
             }

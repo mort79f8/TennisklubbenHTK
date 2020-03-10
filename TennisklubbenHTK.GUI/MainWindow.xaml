@@ -17,11 +17,13 @@
             <RowDefinition Height="100" />
             <RowDefinition Height="100" />
         </Grid.RowDefinitions>
-        <DataGrid Grid.Row="0" x:Name="MemberListDataGrid">
+        <DataGrid Grid.Row="0"
+                  Grid.RowSpan="3"
+                  x:Name="MemberListDataGrid">
         </DataGrid>
 
         <Button x:Name="CreateNewMemberBtn"
-                Grid.Row="1"
+                Grid.Row="5"
                 Content="Tilføj nyt medlem"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Left"                

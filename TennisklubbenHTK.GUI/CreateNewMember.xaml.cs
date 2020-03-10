@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using TennisklubbenHTK.BIZ;
+using TennisklubbenHTK.Entities;
 
 namespace TennisklubbenHTK.GUI
 {
@@ -25,6 +26,7 @@ namespace TennisklubbenHTK.GUI
         {
             InitializeComponent();
             biz = new Biz();
+            birthdayDatePicker.SelectedDate = DateTime.Today;
         }
 
         private void CancelCreateNewMemberBtn_Click(object sender, RoutedEventArgs e)
@@ -34,7 +36,9 @@ namespace TennisklubbenHTK.GUI
 
         private void CreateNewMemberBtn_Click(object sender, RoutedEventArgs e)
         {
-            
+            biz.CreateNewMember(firstNametxtBox.Text, lastNametxtBox.Text, addresstxtBox.Text, mobilNumbertxtBox.Text, emailtxtBox.Text, birthdayDatePicker.SelectedDate.Value);
+            MessageBox.Show("Medlem er blevet tilført");
+            this.Close();
         }
     }
 }
