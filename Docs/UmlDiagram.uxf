@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>190</x>
+      <x>180</x>
       <y>50</y>
       <w>210</w>
       <h>190</h>
@@ -28,7 +28,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>460</x>
+      <x>450</x>
       <y>50</y>
       <w>210</w>
       <h>190</h>
@@ -39,6 +39,42 @@
 +CourtId: int
 +Name: string
 +Underlay: string
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>720</x>
+      <y>50</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Reservation
+--
+--
++ReservationId : int
++Time : string
++Court : int
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>720</x>
+      <y>290</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>ReservationMembers
+--
+--
++ReservationMembersId: int
++Members : List&lt;Member&gt;
++ReservationId: int
 --
 </panel_attributes>
     <additional_attributes/>

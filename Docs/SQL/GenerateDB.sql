@@ -27,3 +27,17 @@ CREATE TABLE Court (
 	Underlay NVARCHAR(50) NOT NULL
 	);
 GO
+
+CREATE TABLE Reservation (
+	ReservationId INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+	Time NVARCHAR(11) NOT NULL,
+	Court INT NOT NULL FOREIGN KEY REFERENCES Court(CourtId)
+	);
+GO
+
+CREATE TABLE ReservationMembers (
+	ReservationMembersId INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+	Reservation INT NOT NULL FOREIGN KEY REFERENCES Reservation(ReservationId),
+	Member INT NOT NULL FOREIGN KEY REFERENCES Members(MemberId)
+	);
+GO
