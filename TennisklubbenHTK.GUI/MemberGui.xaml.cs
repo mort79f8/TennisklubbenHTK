@@ -57,6 +57,13 @@ namespace TennisklubbenHTK.GUI
 
         }
 
+        private void CreateNewMember_Click(object sender, RoutedEventArgs e)
+        {
+            biz.CreateNewMember(firstNametxtBox.Text, lastNametxtBox.Text, addresstxtBox.Text, mobilNumbertxtBox.Text, emailtxtBox.Text, birthdayDatePicker.SelectedDate.Value);
+            MessageBox.Show("Medlem er blevet tilmeldt til klubben");
+            ListOfMembers = biz.GetListOfMembers();
+            ListOfMembersDataGrid.ItemsSource = ListOfMembers;
+        }
 
         #region OnPropertyChanged Handling
         public event PropertyChangedEventHandler PropertyChanged;
@@ -64,5 +71,6 @@ namespace TennisklubbenHTK.GUI
         private void OnPropertyChanged(string propertyName)
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         #endregion
+
     }
 }

@@ -167,7 +167,8 @@
                     Content="Tilføj medlem"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center"
-                    Width="150" />
+                    Width="150"
+                    Click="CreateNewMember_Click" />
 
             <!--#endregion-->
         </Grid>
