@@ -17,7 +17,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
-            <RowDefinition Height="100" />
+            <RowDefinition Height="400" />
         </Grid.RowDefinitions>
 
         <!--#region DataGrid-->
@@ -170,6 +170,42 @@
                     Width="150"
                     Click="CreateNewMember_Click" />
 
+            <!--#endregion-->
+        </Grid>
+        <!--#endregion-->
+
+        <!--#region Grid for Filters-->
+        <Grid Grid.Row="1"
+              Grid.Column="0"
+              Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!--#region Labels for filter options-->
+            <Label Grid.Column="0"
+                   Grid.Row="0"
+                   Content="Kun aktive medlemmer"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center" />
+
+            <!--#endregion-->
+
+            <!--#region Filter options-->
+            <CheckBox Grid.Row="0"
+                      Grid.Column="1"
+                      x:Name="ActiveFilterCheckBox"
+                      HorizontalAlignment="Center"
+                      Margin="66,16"
+                      Checked="ActiveFilterCheckBox_Checked"
+                      Unchecked="ActiveFilterCheckBox_Checked"/>
             <!--#endregion-->
         </Grid>
         <!--#endregion-->

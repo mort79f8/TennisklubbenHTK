@@ -72,5 +72,16 @@ namespace TennisklubbenHTK.GUI
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         #endregion
 
+        private void ActiveFilterCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            if (ActiveFilterCheckBox.IsChecked == true)
+            {
+                ListOfMembersDataGrid.ItemsSource = ListOfMembers.Where(m => m.Active == true);
+            }
+            else
+            {
+                ListOfMembersDataGrid.ItemsSource = ListOfMembers;
+            }
+        }
     }
 }
