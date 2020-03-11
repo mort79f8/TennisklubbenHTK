@@ -20,3 +20,10 @@ CREATE TABLE Members (
 	Active bit NOT NUll
 	);
 GO
+
+CREATE TABLE Court (
+	CourtId INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+	Name NVARCHAR(50) NOT NULL,
+	Underlay NVARCHAR(50) NOT NULL
+	);
+GO

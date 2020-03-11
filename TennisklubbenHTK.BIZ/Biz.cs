@@ -11,11 +11,15 @@ namespace TennisklubbenHTK.BIZ
     public class Biz
     {
         MemberRepository memberRepository;
+        CourtRepository courtRepository;
+
         public Biz()
         {
             memberRepository = new MemberRepository();
+            courtRepository = new CourtRepository();
         }
 
+        #region Members methods
         public List<Member> GetListOfMembers()
         {
             return memberRepository.GetAllMembers();
@@ -36,5 +40,35 @@ namespace TennisklubbenHTK.BIZ
             Member member = new Member() { FirstName = firstName, LastName = lastName, MemberAddress = address, MobilNumber = mobilNumber, Email = email, Birthday = birthday, RankListPoints = 0, Active = true };
             memberRepository.CreateNewMember(member);
         }
+        #endregion
+
+        #region Court methods
+        public List<Court> GetListOfCourts()
+        {
+            return courtRepository.GetListOfcourts();
+        }
+
+        public Court GetCourtFromId(int courtId)
+        {
+            return courtRepository.GetCourtFromId(courtId);
+        }
+
+        public void UpdateCourt(Court court)
+        {
+            courtRepository.UpdateCourt(court);
+        }
+
+        public void DeleteCourt(int courtId)
+        {
+            courtRepository.DeleteCourt(courtId);
+        }
+
+        public void CreateNewCourt(string name, string underlay)
+        {
+            Court court = new Court(name, underlay);
+            courtRepository.CreateNewCourt(court);
+        }
+
+        #endregion
     }
 }
