@@ -93,9 +93,9 @@ namespace TennisklubbenHTK.Entities
 
         public static (bool isValid, string errorMessage) FirstnameValidation(string firstname)
         {
-            if (firstname.Length > 10)
+            if (firstname.Length > 15)
             {
-                return (false, "Fornavnet er for langt, må ikke være mere end 10 bogstaver langt");
+                return (false, "Fornavnet er for langt, må ikke være mere end 15 bogstaver langt");
             }
             if (firstname.Any(char.IsDigit))
             {
