@@ -8,8 +8,29 @@ namespace TennisklubbenHTK.Entities
 {
     public class Member
     {
+        private string firstname;
+
         public int MemberId { get; set; }
-        public string FirstName { get; set; }
+        public string FirstName 
+        {
+            get => firstname;
+            set
+            {
+                var validationResult = FirstnameValidation(value);
+                if (!validationResult.isValid)
+                {
+                    throw new ArgumentException(validationResult.errorMessage, nameof(FirstName));
+                }
+                else
+                {
+                    if (value != firstname)
+                    {
+                        firstname = value;
+                    }
+                }
+            }
+        }
+
         public string LastName { get; set; }
         public string MemberAddress { get; set; }
         public string MobilNumber { get; set; }
@@ -68,6 +89,24 @@ namespace TennisklubbenHTK.Entities
 
         public Member()
         {
+        }
+
+        public static (bool isValid, string errorMessage) FirstnameValidation(string firstname)
+        {
+            if (firstname.Length > 10)
+            {
+                return (false, "Fornavnet er for langt, må ikke være mere end 10 bogstaver langt");
+            }
+            if (firstname.Any(char.IsDigit))
+            {
+                return (false, "Fornavnet må ikke indeholde tal");
+            }
+            if (firstname.Length < 2)
+            {
+                return (false, "Fornavnet skal være på mere end 1 bogstav");
+            }
+
+            return (true, String.Empty);
         }
     }
 }
