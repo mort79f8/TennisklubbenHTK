@@ -59,10 +59,18 @@ namespace TennisklubbenHTK.GUI
 
         private void CreateNewMember_Click(object sender, RoutedEventArgs e)
         {
-            biz.CreateNewMember(firstNametxtBox.Text, lastNametxtBox.Text, addresstxtBox.Text, mobilNumbertxtBox.Text, emailtxtBox.Text, birthdayDatePicker.SelectedDate.Value);
-            MessageBox.Show("Medlem er blevet tilmeldt til klubben");
-            ListOfMembers = biz.GetListOfMembers();
-            ListOfMembersDataGrid.ItemsSource = ListOfMembers;
+            var isfirstnameValid = Member.FirstnameValidation(firstNametxtBox.Text);
+            if (!isfirstnameValid.isValid)
+            {
+                MessageBox.Show(isfirstnameValid.errorMessage);
+            }
+            else
+            {
+                biz.CreateNewMember(firstNametxtBox.Text, lastNametxtBox.Text, addresstxtBox.Text, mobilNumbertxtBox.Text, emailtxtBox.Text, birthdayDatePicker.SelectedDate.Value);
+                MessageBox.Show("Medlem er blevet tilmeldt til klubben");
+                ListOfMembers = biz.GetListOfMembers();
+                ListOfMembersDataGrid.ItemsSource = ListOfMembers;
+            }
         }
         private void ActiveFilterCheckBox_Checked(object sender, RoutedEventArgs e)
         {
