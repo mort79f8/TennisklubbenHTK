@@ -74,7 +74,7 @@
 --
 +ReservationMembersId: int
 +Members : List&lt;Member&gt;
-+ReservationId: int
++Reservation: int
 --
 </panel_attributes>
     <additional_attributes/>
