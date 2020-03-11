@@ -33,5 +33,12 @@ namespace TennisklubbenHTK.GUI
             memberGui.Owner = this;
             memberGui.Show();
         }
+
+        private void BaneListeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            CourtGui courtGui = new CourtGui();
+            courtGui.Owner = this;
+            courtGui.Show();
+        }
     }
 }

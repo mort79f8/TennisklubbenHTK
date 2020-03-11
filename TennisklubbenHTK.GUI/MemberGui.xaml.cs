@@ -64,14 +64,6 @@ namespace TennisklubbenHTK.GUI
             ListOfMembers = biz.GetListOfMembers();
             ListOfMembersDataGrid.ItemsSource = ListOfMembers;
         }
-
-        #region OnPropertyChanged Handling
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        private void OnPropertyChanged(string propertyName)
-            => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        #endregion
-
         private void ActiveFilterCheckBox_Checked(object sender, RoutedEventArgs e)
         {
             if (ActiveFilterCheckBox.IsChecked == true)
@@ -83,5 +75,13 @@ namespace TennisklubbenHTK.GUI
                 ListOfMembersDataGrid.ItemsSource = ListOfMembers;
             }
         }
+
+        #region OnPropertyChanged Handling
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void OnPropertyChanged(string propertyName)
+            => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        #endregion
+
     }
 }

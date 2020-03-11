@@ -1,0 +1,111 @@
+﻿<Window x:Class="TennisklubbenHTK.GUI.CourtGui"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TennisklubbenHTK.GUI"
+        mc:Ignorable="d"
+        Title="CourtGui" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="300" />
+        </Grid.ColumnDefinitions>
+
+        <!--#region Datagrid for Courts-->
+        <DataGrid x:Name="ListOfCourtsDataGrid"
+                  Grid.Row="0"
+                  ItemsSource="{Binding ListOfCourts}"
+                  IsReadOnly="True"
+                  AutoGenerateColumns="False"
+                  SelectionChanged="ListOfCourtsDataGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Bane Navn"
+                                    Binding="{Binding Name}" />
+                <DataGridTextColumn Header="Underlag"
+                                    Binding="{Binding Underlay}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <!--#endregion-->
+
+        <!--#region Grid for right side-->
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            
+            <!--#region Labels-->
+            <Label Grid.Column="0"
+                   Grid.Row="1"
+                   Content="Bane Navn:"
+                   VerticalContentAlignment="Center"
+                   HorizontalContentAlignment="Right"/>
+            <Label Grid.Column="0"
+                   Grid.Row="2"
+                   Content="Underlag:"
+                   VerticalContentAlignment="Center"
+                   HorizontalContentAlignment="Right" />
+            <!--#endregion-->
+            
+            <!--#region Inputs for right side-->
+            <TextBox Grid.Column="1"
+                     Grid.Row="1"
+                     x:Name="CourtNameTxtBox"
+                     Text="{Binding SelectedCourt.Name}"
+                     Height="25"
+                     Width="140"
+                     Margin="10 0"/>
+            <ComboBox Grid.Column="1"
+                      Grid.Row="2"
+                      x:Name="UnderlayComboBox"
+                      Width="140"
+                      Text="{Binding SelectedCourt.Underlay}"
+                      ItemsSource="{Binding UnderlayList}">
+            </ComboBox>
+            <!--#endregion-->
+            
+            <!--#region Buttons for right side-->
+            <Button Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="3"
+                    x:Name="UpdateBtn"
+                    Content="Updatere bane"
+                    Width="150"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Click="UpdateBtn_Click" />
+            <Button Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="4"
+                    x:Name="CreateNewCourtBtn"
+                    Content="Tilføj bane"
+                    Width="150"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Click="CreateNewCourtBtn_Click" />
+            <Button Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="5"
+                    x:Name="DeleteCourtBtn"
+                    Content="Fjern bane"
+                    Width="150"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Click="DeleteCourtBtn_Click" />
+
+            <!--#endregion-->
+        </Grid>
+        <!--#endregion-->
+    </Grid>
+</Window>

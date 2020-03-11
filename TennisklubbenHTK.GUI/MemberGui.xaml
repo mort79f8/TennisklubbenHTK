@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TennisklubbenHTK.GUI"
         mc:Ignorable="d"
         Title="MemberGui"
-        Height="1000"
+        Height="700"
         Width="1200"
         WindowStartupLocation="CenterScreen">
     <Grid>
@@ -17,7 +17,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
-            <RowDefinition Height="400" />
+            <RowDefinition Height="100" />
         </Grid.RowDefinitions>
 
         <!--#region DataGrid-->

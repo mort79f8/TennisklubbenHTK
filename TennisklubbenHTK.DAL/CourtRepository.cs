@@ -52,7 +52,7 @@ namespace TennisklubbenHTK.DAL
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TennisklubbenHTKDB")))
             {
-                connection.Execute("dbo.spTennisKlubben_DeleteCourtBasedOnId @CourtId", courtId);
+                connection.Execute("dbo.spTennisKlubben_DeleteCourtBasedOnId @CourtId", new { CourtId = courtId });
             }
         }
     }

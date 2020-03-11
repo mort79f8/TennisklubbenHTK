@@ -44,6 +44,7 @@
                 Content="Bane liste"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
-                Width="150" />
+                Width="150"
+                Click="BaneListeBtn_Click" />
     </Grid>
 </Window>
