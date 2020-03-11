@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TennisklubbenHTK.DAL", "Ten
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TennisklubbenHTK.BIZ", "TennisklubbenHTK.BIZ\TennisklubbenHTK.BIZ.csproj", "{B9604D98-4188-423B-BA78-CCA0703E710B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TennisklubbenHTK.EntitiesTest", "TennisklubbenHTK.EntitiesTest\TennisklubbenHTK.EntitiesTest.csproj", "{E510E2B7-6DBF-4C65-B41C-72407C8CCF78}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B9604D98-4188-423B-BA78-CCA0703E710B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9604D98-4188-423B-BA78-CCA0703E710B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9604D98-4188-423B-BA78-CCA0703E710B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E510E2B7-6DBF-4C65-B41C-72407C8CCF78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E510E2B7-6DBF-4C65-B41C-72407C8CCF78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E510E2B7-6DBF-4C65-B41C-72407C8CCF78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E510E2B7-6DBF-4C65-B41C-72407C8CCF78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
