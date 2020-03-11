@@ -26,6 +26,11 @@ namespace TennisklubbenHTK.BIZ
             return memberRepository.GetAllActiveMembers();
         }
 
+        public void UpdateMember(Member member)
+        {
+            memberRepository.UpdateMember(member);
+        }
+
         public void CreateNewMember(string firstName, string lastName, string address, string mobilNumber, string email, DateTime birthday )
         {
             Member member = new Member() { FirstName = firstName, LastName = lastName, MemberAddress = address, MobilNumber = mobilNumber, Email = email, Birthday = birthday, RankListPoints = 0, Active = true };

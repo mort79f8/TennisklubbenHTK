@@ -49,9 +49,20 @@ namespace TennisklubbenHTK.GUI
         }
 
 
+
+        private void UpdateMemberBtn_Click(object sender, RoutedEventArgs e)
+        {
+            biz.UpdateMember(SelectedMember);
+            MessageBox.Show("Medlem er blevet updateret");
+
+        }
+
+
+        #region OnPropertyChanged Handling
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void OnPropertyChanged(string propertyName)
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        #endregion
     }
 }

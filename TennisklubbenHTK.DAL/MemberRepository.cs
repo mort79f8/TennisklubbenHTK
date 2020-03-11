@@ -51,7 +51,7 @@ namespace TennisklubbenHTK.DAL
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TennisklubbenHTKDB")))
             {
-                connection.Execute("dbo.spTennisKlubbenHTK_UpdateMember @MemberId @FirstName, @LastName, @MemberAddress, @MobilNumber, @Email, @Birthday, @RankListPoints, @Active", member);
+                connection.Execute("dbo.spTennisKlubbenHTK_UpdateMember @MemberId, @FirstName, @LastName, @MemberAddress, @MobilNumber, @Email, @Birthday, @RankListPoints, @Active", member);
             }
         }
 
@@ -59,7 +59,7 @@ namespace TennisklubbenHTK.DAL
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TennisklubbenHTKDB")))
             {
-                connection.Execute("dbo.spTennisKlubbenHTK_TurnMemberInActive @MemberId @FirstName, @LastName, @MemberAddress, @MobilNumber, @Email, @Birthday, @RankListPoints, @Active", member);
+                connection.Execute("dbo.spTennisKlubbenHTK_TurnMemberInActive @MemberId, @FirstName, @LastName, @MemberAddress, @MobilNumber, @Email, @Birthday, @RankListPoints, @Active", member);
             }
         }
     }
