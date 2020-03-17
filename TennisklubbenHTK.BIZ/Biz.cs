@@ -12,11 +12,13 @@ namespace TennisklubbenHTK.BIZ
     {
         MemberRepository memberRepository;
         CourtRepository courtRepository;
+        ReservationRepository reservationRepository;
 
         public Biz()
         {
             memberRepository = new MemberRepository();
             courtRepository = new CourtRepository();
+            reservationRepository = new ReservationRepository();
         }
 
         #region Members methods
@@ -69,6 +71,13 @@ namespace TennisklubbenHTK.BIZ
             courtRepository.CreateNewCourt(court);
         }
 
+        #endregion
+
+        #region Reservations methods
+        public List<Reservation> GetListOfReservations()
+        {
+            return reservationRepository.GetAllReservations();
+        }
         #endregion
     }
 }

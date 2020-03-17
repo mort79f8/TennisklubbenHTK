@@ -46,5 +46,14 @@
                 HorizontalAlignment="Center"
                 Width="150"
                 Click="BaneListeBtn_Click" />
+        <Button x:Name="ReservationBtn"
+                Grid.Column="1"
+                Grid.Row="3"
+                Content="Reservations liste"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Width="150"
+                Click="ReservationBtn_Click" />
+
     </Grid>
 </Window>

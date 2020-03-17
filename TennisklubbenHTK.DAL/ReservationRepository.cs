@@ -9,7 +9,7 @@ using TennisklubbenHTK.Entities;
 
 namespace TennisklubbenHTK.DAL
 {
-    class ReservationRepository
+    public class ReservationRepository
     {
         public ReservationRepository()
         {

@@ -40,5 +40,12 @@ namespace TennisklubbenHTK.GUI
             courtGui.Owner = this;
             courtGui.Show();
         }
+
+        private void ReservationBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ReservationGui reservationGui = new ReservationGui();
+            reservationGui.Owner = this;
+            reservationGui.Show();
+        }
     }
 }
