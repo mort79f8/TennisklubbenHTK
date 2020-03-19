@@ -20,7 +20,7 @@ namespace TennisklubbenHTK.DAL
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TennisklubbenHTKDB")))
             {
-                return connection.Query<Reservation>("SELECT * FROM Reservation INNER JOIN Court ON Reservation.Court = Court.CourtId").ToList();
+                return connection.Query<Reservation>("SELECT * FROM Reservation LEFT JOIN Court ON Reservation.Court = Court.CourtId").ToList();
             }
         }
     }

@@ -15,12 +15,12 @@ namespace TennisklubbenHTK.Entities
         /// <summary>
         /// Constructor for Court this is used when getting data from the database
         /// </summary>
-        /// <param name="courtId"></param>
+        /// <param name="Id"></param>
         /// <param name="name"></param>
         /// <param name="underlay"></param>
-        public Court(int courtId, string name, string underlay)
+        public Court(int courtid, string name, string underlay)
         {
-            CourtId = courtId;
+            CourtId = courtid;
             Name = name;
             Underlay = underlay;
         }
